@@ -7,8 +7,8 @@ const USER = 'akshayreddy9';
 const OUT = path.join(__dirname, '..', 'assets');
 
 const THEMES = {
-  dark: { bg: '#0B1220', panel: '#111A2E', line: '#1E2A44', text: '#E6EDF7', muted: '#8B9BB4', accent: '#2DD4BF', accent2: '#FBBF24' },
-  light: { bg: '#F7FAFC', panel: '#FFFFFF', line: '#DDE5EE', text: '#0F172A', muted: '#55657E', accent: '#0D9488', accent2: '#D97706' },
+  dark: { bg: '#0B1220', panel: '#111A2E', line: '#1E2A44', text: '#E6EDF7', muted: '#8B9BB4', accent: '#2DD4BF', accent2: '#FBBF24', photoBg: '#99F6E4', ink: '#0B1220' },
+  light: { bg: '#F7FAFC', panel: '#FFFFFF', line: '#DDE5EE', text: '#0F172A', muted: '#55657E', accent: '#0D9488', accent2: '#D97706', photoBg: '#CCFBF1', ink: '#0F172A' },
 };
 const SANS = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif";
 const MONO = "ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace";
@@ -28,10 +28,14 @@ const LANG_COLORS = {
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+// Dithered portrait (scripts/portrait.js) in a round frame, tinted per theme through an alpha mask.
+const PORTRAIT = fs.readFileSync(path.join(OUT, 'portrait.png')).toString('base64');
+
 function banner(t) {
+  const cx = 860, cy = 130, r = 112;
   // A small neural network on the right: three layers, every node linked to the next layer.
-  const layers = [[70, 130, 190], [40, 100, 160, 220], [85, 175], [130]];
-  const xs = [690, 790, 890, 960];
+  const layers = [[85, 130, 175], [62, 107, 153, 198], [100, 160], [130]];
+  const xs = [560, 610, 660, 705];
   const nodes = layers.map((ys, i) => ys.map((y) => [xs[i], y]));
   let edges = '';
   for (let i = 0; i < nodes.length - 1; i++)
@@ -39,7 +43,7 @@ function banner(t) {
       for (const [x2, y2] of nodes[i + 1])
         edges += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
   const dots = nodes.flat().map(([x, y], i) =>
-    `<circle cx="${x}" cy="${y}" r="${i % 4 === 1 ? 9 : 7}" fill="${i % 4 === 1 ? t.accent2 : t.accent}"/>`).join('');
+    `<circle cx="${x}" cy="${y}" r="${i % 4 === 1 ? 6 : 5}" fill="${i % 4 === 1 ? t.accent2 : t.accent}"/>`).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260">
   <defs>
@@ -51,6 +55,14 @@ function banner(t) {
   <rect width="1000" height="260" rx="18" fill="url(#fade)"/>
   <g stroke="${t.accent}" stroke-opacity="0.28" stroke-width="1.2">${edges}</g>
   ${dots}
+  <mask id="pm" style="mask-type:alpha"><image href="data:image/png;base64,${PORTRAIT}" x="${cx - r}" y="${cy - r}" width="${2 * r}" height="${2 * r}" style="image-rendering:pixelated"/></mask>
+  <clipPath id="pc"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath>
+  <circle cx="${cx}" cy="${cy}" r="${r + 9}" fill="none" stroke="${t.accent}" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="3 6"/>
+  <g clip-path="url(#pc)">
+    <rect x="${cx - r}" y="${cy - r}" width="${2 * r}" height="${2 * r}" fill="${t.photoBg}"/>
+    <rect x="${cx - r}" y="${cy - r}" width="${2 * r}" height="${2 * r}" fill="${t.ink}" mask="url(#pm)"/>
+  </g>
+  <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${t.accent}" stroke-width="3"/>
   <text x="56" y="78" font-family="${MONO}" font-size="15" font-weight="600" letter-spacing="2.5" fill="${t.accent}">AI ENGINEER  ·  FULL-STACK DEVELOPER</text>
   <text x="54" y="148" font-family="${SANS}" font-size="64" font-weight="800" fill="${t.text}">Akshay</text>
   <text x="56" y="188" font-family="${SANS}" font-size="20" fill="${t.muted}">I train machine-learning models and ship them</text>
