@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="150" viewBox="0 0 1000 150">
+  <g transform="translate(0,0)">
+    <rect width="238" height="150" rx="14" fill="#111A2E" stroke="#1E2A44"/>
+    <rect x="22" y="24" width="28" height="4" rx="2" fill="#2DD4BF"/>
+    <text x="22" y="88" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" fill="#E6EDF7">76</text>
+    <text x="22" y="114" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#E6EDF7">API endpoints</text>
+    <text x="22" y="134" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8B9BB4">GGPay server</text>
+  </g>
+  <g transform="translate(254,0)">
+    <rect width="238" height="150" rx="14" fill="#111A2E" stroke="#1E2A44"/>
+    <rect x="22" y="24" width="28" height="4" rx="2" fill="#FBBF24"/>
+    <text x="22" y="88" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" fill="#E6EDF7">35</text>
+    <text x="22" y="114" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#E6EDF7">app screens</text>
+    <text x="22" y="134" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8B9BB4">GGPay Android app</text>
+  </g>
+  <g transform="translate(508,0)">
+    <rect width="238" height="150" rx="14" fill="#111A2E" stroke="#1E2A44"/>
+    <rect x="22" y="24" width="28" height="4" rx="2" fill="#2DD4BF"/>
+    <text x="22" y="88" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" fill="#E6EDF7">15</text>
+    <text x="22" y="114" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#E6EDF7">DB migrations</text>
+    <text x="22" y="134" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8B9BB4">Craftkiya · Postgres RLS</text>
+  </g>
+  <g transform="translate(762,0)">
+    <rect width="238" height="150" rx="14" fill="#111A2E" stroke="#1E2A44"/>
+    <rect x="22" y="24" width="28" height="4" rx="2" fill="#FBBF24"/>
+    <text x="22" y="88" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" fill="#E6EDF7">22</text>
+    <text x="22" y="114" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#E6EDF7">Python modules</text>
+    <text x="22" y="134" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8B9BB4">Banking AI assistant</text>
+  </g>
+</svg>

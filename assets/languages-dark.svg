@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="176" viewBox="0 0 1000 176">
+  <rect width="1000" height="176" rx="14" fill="#111A2E" stroke="#1E2A44"/>
+  <text x="24" y="42" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#E6EDF7">Languages across my repos</text>
+  <clipPath id="r"><rect x="24" y="64" width="952" height="14" rx="7"/></clipPath>
+  <g clip-path="url(#r)"><rect x="24" y="64" width="350" height="14" fill="#F1E05A"/><rect x="374" y="64" width="264" height="14" fill="#3178C6"/><rect x="638" y="64" width="170" height="14" fill="#3572A5"/><rect x="808" y="64" width="79" height="14" fill="#E34C26"/><rect x="887" y="64" width="53" height="14" fill="#663399"/><rect x="940" y="64" width="36" height="14" fill="#94A3B8"/></g>
+    <circle cx="30" cy="111" r="6" fill="#F1E05A"/>
+    <text x="44" y="116" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#E6EDF7">JavaScript <tspan fill="#8B9BB4">36.8%</tspan></text>
+    <circle cx="350" cy="111" r="6" fill="#3178C6"/>
+    <text x="364" y="116" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#E6EDF7">TypeScript <tspan fill="#8B9BB4">27.7%</tspan></text>
+    <circle cx="670" cy="111" r="6" fill="#3572A5"/>
+    <text x="684" y="116" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#E6EDF7">Python <tspan fill="#8B9BB4">17.9%</tspan></text>
+    <circle cx="30" cy="141" r="6" fill="#E34C26"/>
+    <text x="44" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#E6EDF7">HTML <tspan fill="#8B9BB4">8.3%</tspan></text>
+    <circle cx="350" cy="141" r="6" fill="#663399"/>
+    <text x="364" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#E6EDF7">CSS <tspan fill="#8B9BB4">5.6%</tspan></text>
+    <circle cx="670" cy="141" r="6" fill="#94A3B8"/>
+    <text x="684" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#E6EDF7">PLpgSQL <tspan fill="#8B9BB4">3.7%</tspan></text>
+</svg>
